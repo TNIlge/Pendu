@@ -1,0 +1,25 @@
+# Fichiers compilés
+*.o
+pendu
+pendu.exe
+*.exe
+
+# Fichiers générés par le programme  
+data/users.dat
+data/leaderboard.dat
+data/stats/*.dat
+data/saves/*.sav
+
+# Dossiers de compilation
+bin/
+obj/
+Debug/
+Release/
+
+# IDE Code::Blocks
+*.cbp.layout
+*.depend
+
+# Autres fichiers
+.DS_Store
+Thumbs.db
