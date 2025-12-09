@@ -1,0 +1,40 @@
+CHAT|Animal domestique qui miaule
+PAIN|On le mange au petit déjeuner
+VIE|Contraire de la mort
+BOIS|Matière des arbres
+ROSE|Fleur rouge parfumée
+LUNE|Astre visible la nuit
+PEUR|Sentiment quand on a peur
+VENT|Déplacement de l'air
+FETE|Célébration joyeuse
+MER|Grande étendue d'eau salée
+CLE|Objet pour ouvrir une porte
+FEU|Flammes chaudes et lumineuses
+PIED|Partie du corps pour marcher
+MAIN|Partie du corps avec cinq doigts
+JOUR|Période de 24 heures
+NUIT|Période d'obscurité
+REVE|Images pendant le sommeil
+RIRE|Expression de joie
+PAIX|Absence de guerre
+CIEL|Au-dessus de nos têtes
+TERRE|Planète où nous vivons
+FLEUR|Plante avec des pétales
+LIVRE|Objet avec des pages pour lire
+ARBRE|Grand végétal avec des branches
+VILLE|Grande agglomération urbaine
+FRUIT|Produit comestible d'un arbre
+PONT|Construction pour traverser
+ROUTE|Voie pour les véhicules
+PORTE|Ouverture pour entrer
+SOLEIL|Étoile qui nous éclaire le jour
+LAC|Étendue d'eau douce
+TOIT|Partie haute d'une maison
+COIN|Angle d'une pièce
+AILE|Permet aux oiseaux de voler
+SABLE|Petits grains sur la plage
+HERBE|Végétation verte au sol
+OMBRE|Zone sans lumière directe
+PERLE|Bijou produit par une huître
+NEIGE|Eau gelée qui tombe en hiver
+PLUIE|Eau qui tombe du ciel
