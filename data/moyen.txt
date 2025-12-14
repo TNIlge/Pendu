@@ -1,0 +1,40 @@
+MAISON|Bâtiment où on habite
+VOITURE|Véhicule à quatre roues
+JARDIN|Espace vert avec des plantes
+LUMIERE|Permet de voir dans le noir
+CHEVAL|Animal qui galope
+MONTAGNE|Relief très élevé
+FENETRE|Ouverture dans un mur pour voir dehors
+RIVIERE|Cours d'eau qui coule
+TABLEAU|Surface pour écrire en classe
+COLLEGE|Établissement scolaire après le primaire
+OISEAU|Animal avec des ailes et des plumes
+LETTRE|Message écrit sur papier
+VILLAGE|Petit groupe de maisons
+PRAIRIE|Grand champ d'herbe verte
+NUAGE|Masse blanche dans le ciel
+ETOILE|Point lumineux dans le ciel nocturne
+PLAGE|Bord de mer avec du sable
+FORET|Grande zone avec beaucoup d'arbres
+MUSIQUE|Sons organisés agréables à écouter
+COULEUR|Rouge, bleu, vert, jaune, etc.
+CINEMA|Lieu pour regarder des films
+MARCHE|Lieu pour acheter des produits frais
+GARAGE|Endroit pour garer la voiture
+CHEMIN|Petite route en terre
+CONSEIL|Avis donné à quelqu'un
+HISTOIRE|Récit d'événements passés
+SCIENCE|Étude des phénomènes naturels
+PASSION|Intérêt très fort pour quelque chose
+CHAMBRE|Pièce pour dormir
+CUISINE|Pièce pour préparer les repas
+BOUGIE|Source de lumière avec une flamme
+BALCON|Plateforme extérieure d'un immeuble
+SAVON|Produit pour se laver
+ECHELLE|Objet pour monter en hauteur
+MIROIR|Surface réfléchissante
+VALISE|Bagage pour voyager
+CHAPEAU|Couvre la tête
+COUTEAU|Ustensile pour couper
+FOURCHETTE|Ustensile pour piquer les aliments
+GUITARE|Instrument à cordes

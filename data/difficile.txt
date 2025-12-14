@@ -1,0 +1,40 @@
+ORDINATEUR|Machine électronique pour travailler
+PROGRAMMATION|Écriture de code informatique
+DEVELOPPEMENT|Création de logiciels et applications
+MATHEMATIQUES|Science des nombres et des calculs
+GEOGRAPHIE|Science qui étudie la Terre
+TELEPHONE|Appareil pour communiquer à distance
+RESTAURANT|Établissement où on mange des repas
+AGRICULTURE|Culture de la terre et élevage
+BIBLIOTHEQUE|Lieu où on emprunte des livres
+ELECTRICITE|Énergie qui alimente nos appareils
+ARCHITECTURE|Art de concevoir et construire
+PHILOSOPHIE|Réflexion sur le sens de la vie
+TECHNOLOGIE|Application des connaissances scientifiques
+PSYCHOLOGIE|Science qui étudie le comportement humain
+ARCHEOLOGIE|Science qui étudie les civilisations anciennes
+BIOLOGIE|Science qui étudie les êtres vivants
+LITTERATURE|Ensemble des œuvres écrites
+ASTRONOMIE|Science qui étudie les astres et l'univers
+DEMOCRATIE|Régime politique où le peuple vote
+ENCYCLOPEDIE|Ouvrage contenant toutes les connaissances
+ADMINISTRATION|Gestion des affaires publiques
+COMMUNICATION|Transmission d'informations
+ORGANISATION|Arrangement structuré des éléments
+ENTREPRISE|Société commerciale
+UNIVERSITE|Établissement d'enseignement supérieur
+INTELLIGENCE|Capacité de comprendre et réfléchir
+ENVIRONNEMENT|Ensemble des éléments naturels autour de nous
+IMAGINATION|Capacité de créer des images mentales
+COMPETITION|Rivalité entre personnes ou équipes
+CELEBRATION|Fête pour marquer un événement
+OBSERVATION|Action d'examiner attentivement
+CONSTITUTION|Loi fondamentale d'un État
+REVOLUTION|Changement radical dans la société
+NAVIGATION|Art de diriger un navire
+PROFESSION|Métier exercé régulièrement
+INSTRUCTION|Enseignement ou ordre donné
+GENERATION|Ensemble de personnes du même âge
+VEGETATION|Ensemble des plantes d'une région
+INSPIRATION|Source d'idées créatives
+PRESENTATION|Action de montrer ou exposer
