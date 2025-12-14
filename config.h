@@ -42,6 +42,9 @@ typedef enum {
 #define ESSAIS_MOYEN 8
 #define ESSAIS_DIFFICILE 6
 
+// Longueur maximale des options dans le menu
+#define MAX_OPTION_LONGUEUR 100
+
 typedef struct {
     int id;                        // ID unique de l'utilisateur
     char pseudo[MAX_PSEUDO];       // Pseudo de l'utilisateur
