@@ -183,9 +183,9 @@ void jouer_partie(Difficulte niveau) {
             "4. Abandonner"
         };
 
-        afficher_menu("\n=== QUE VOULEZ-VOUS FAIRE ? ===", options_jeu, 4);
+        afficher_menu("=== QUE VOULEZ-VOUS FAIRE ? ===/n", options_jeu, 4);
 
-        int action = lire_choix_action();
+        int action = lire_choix_menu();
 
         switch (action) {
             case 1: {
@@ -318,7 +318,7 @@ void menu_principal(void) {
                             nettoyer_ecran();
                             afficher_etat_jeu(partie);
 
-                            if (est_victoire(partie)) {
+                            /*if (est_victoire(partie)) {
                                 partie->partie_gagnee = 1;
                                 afficher_victoire(partie);
                                 break;
@@ -328,7 +328,7 @@ void menu_principal(void) {
                                 partie->partie_gagnee = 0;
                                 afficher_defaite(partie);
                                 break;
-                            }
+                            }*/
 
                             char options_jeu[][MAX_OPTION_LONGUEUR] = {
                                 "1. Proposer une lettre",
@@ -337,9 +337,9 @@ void menu_principal(void) {
                                 "4. Abandonner"
                             };
 
-                            afficher_menu("\n=== QUE VOULEZ-VOUS FAIRE ? ===", options_jeu, 4);
+                            afficher_menu("=== QUE VOULEZ-VOUS FAIRE ? ===\n", options_jeu, 4);
 
-                            int action = lire_choix_action();
+                            int action = lire_choix_menu();
 
                             switch (action) {
                                 case 1: {
@@ -373,6 +373,7 @@ void menu_principal(void) {
                                     } else {
                                         afficher_indice(partie->indice);
                                     }
+
                                     attendre_touche();
                                     break;
 
