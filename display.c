@@ -242,7 +242,7 @@ void afficher_etat_jeu(Partie *partie) {
     char temps_buffer[9];
     formater_duree(duree_secondes, temps_buffer);
 
-    nettoyer_ecran();
+    //nettoyer_ecran();
 
     printf("==============================================================\n");
     printf(" Niveau : %-10s | Essais : %d/%d  | Temps : %s\n",
@@ -409,7 +409,6 @@ void afficher_victoire(Partie *partie){
     getchar();
 }
 
-
 void afficher_defaite(Partie *partie){
     if (partie == NULL) return;
 
@@ -451,7 +450,6 @@ void afficher_defaite(Partie *partie){
 
     getchar();
 }
-
 
 void afficher_indice(const char *indice){
     nettoyer_ecran();

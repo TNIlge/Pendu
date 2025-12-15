@@ -7,9 +7,10 @@ int lire_choix_menu(void){
     int choix;
 
     while (1) {
+        printf("> ");  // <<< IMPORTANT
         if (fgets(buffer, sizeof(buffer), stdin) == NULL) {
             // EOF ou erreur
-            printf("Erreur de lecture. Reessayez : ");
+            printf("Erreur de lecture. Reessayez.\n ");
             continue;
         }
 
@@ -17,7 +18,7 @@ int lire_choix_menu(void){
         if (sscanf(buffer, "%d", &choix) == 1) {
             return choix;
         } else {
-            printf("Entrée invalide, veuillez entrer un nombre : ");
+            printf("Entree invalide, veuillez entrer un nombre : ");
         }
     }
 }
@@ -42,7 +43,7 @@ char lire_lettre(void){
         if (isalpha(lettre)) {
             return toupper(lettre); // renvoie toujours en majuscule
         } else {
-            printf("Entrée invalide, veuillez entrer une lettre : ");
+            printf("Entree invalide, veuillez entrer une lettre : ");
         }
     }
 }
@@ -93,7 +94,7 @@ int lire_choix_action(void){
             return toupper(c);
         }
 
-        printf("Entrée invalide. Veuillez entrer une lettre.\n");
+        printf("Entree invalide. Veuillez entrer une lettre.\n");
     }
 }
 
