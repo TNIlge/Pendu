@@ -17,6 +17,7 @@ void afficher_statistiques(Statistiques *stats);
 void afficher_victoire(Partie *partie);
 void afficher_defaite(Partie *partie);
 
+
 void afficher_indice(const char *indice);
 void afficher_classement_complet(Leaderboard *leaderboard, int id_utilisateur);
 void afficher_comparaison(Statistiques *stats1, Statistiques *stats2,

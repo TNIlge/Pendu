@@ -23,30 +23,30 @@ int lire_choix_menu(void){
     }
 }
 
-char lire_lettre(void){
-    char buffer[100]; // buffer temporaire pour la saisie
-    char lettre;
 
-    while (1) {
-        if (fgets(buffer, sizeof(buffer), stdin) == NULL) {
-            // EOF ou erreur
-            printf("Erreur de lecture. Reessayez : ");
-            continue;
-        }
 
-        int i = 0;
-        while (buffer[i] != '\0' && isspace(buffer[i])) i++; // ignorer les espaces
-
-        lettre = buffer[i];
-
-        // Vérifie si c'est une lettre
-        if (isalpha(lettre)) {
-            return toupper(lettre); // renvoie toujours en majuscule
-        } else {
-            printf("Entree invalide, veuillez entrer une lettre : ");
-        }
+char lire_lettre(void) {
+    char saisie[10];
+    if (fgets(saisie, sizeof(saisie), stdin) == NULL) {
+        return '\0';
     }
+
+    // Retirer le \n
+    saisie[strcspn(saisie, "\n")] = '\0';
+
+    // Vérifier si c'est un caractère spécial (? ou !)
+    if (strlen(saisie) == 1 && (saisie[0] == '?' || saisie[0] == '!')) {
+        return saisie[0];
+    }
+
+    // Vérifier si c'est une lettre unique
+    if (strlen(saisie) == 1 && isalpha(saisie[0])) {
+        return toupper(saisie[0]);
+    }
+
+    return '\0';
 }
+
 
 Difficulte lire_niveau_difficulte(void){
     int choix;

@@ -57,15 +57,16 @@ Statistiques* charger_statistiques_utilisateur(int id_utilisateur) {
         sscanf(ligne, "%d", &stats->id_utilisateur);
     }
 
-    // Ligne 2: Totaux
     if (fgets(ligne, sizeof(ligne), fichier) != NULL) {
-        sscanf(ligne, "%d|%d|%d|%d|%d|%d",
+        // Essayer le nouveau format avec abandons d'abord
+        int nb_champs = sscanf(ligne, "%d|%d|%d|%d|%d|%d",
                &stats->total_parties,
                &stats->total_victoires,
                &stats->total_defaites,
                &stats->total_essais,
                &stats->total_secondes,
                &stats->total_indices_utilises);
+
     }
 
     // Ligne 3: Stats par niveau
@@ -126,7 +127,6 @@ int sauvegarder_statistiques_utilisateur(Statistiques *stats) {
     // Ligne 1: ID utilisateur
     fprintf(fichier, "%d\n", stats->id_utilisateur);
 
-    // Ligne 2: Totaux
     fprintf(fichier, "%d|%d|%d|%d|%d|%d\n",
             stats->total_parties,
             stats->total_victoires,
@@ -169,7 +169,6 @@ void ajouter_partie_aux_stats(Statistiques *stats, Partie *partie) {
         return;
     }
 
-    // Mettre à jour les totaux
     stats->total_parties++;
 
     if (partie->partie_gagnee == 1) {

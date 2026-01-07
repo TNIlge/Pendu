@@ -231,7 +231,7 @@ void afficher_etat_jeu(Partie *partie) {
         return;
     }
 
-    if (partie->partie_gagnee == 0 && partie->essais_restants == 0) {
+    if (partie->partie_gagnee == 0) {
         afficher_defaite(partie);
         return;
     }
@@ -267,7 +267,7 @@ void afficher_etat_jeu(Partie *partie) {
     printf("--------------------------------------------------------------\n");
     afficher_lettres_utilisees(partie);
 
-    // Affiche si l’indice a été utilisé
+    // Affiche si l'indice a été utilisé
     if (partie->indice_utilise) {
         printf("Indice : %s\n", partie->indice);
     } else {
@@ -356,10 +356,12 @@ void afficher_statistiques(Statistiques *stats){
         for (int i = 0; i < stats->nb_parties_recentes; i++) {
             StatPartie p = stats->parties_recentes[i];
 
+            const char *resultat = (p.victoire == 1) ? "Victoire" : "Defaite";
+
             printf("%d. Mot: %-10s | %s | Essais: %d | Indice: %s\n",
                    i + 1,
                    p.mot,
-                   p.victoire ? "Victoire" : "Défaite",
+                   resultat,
                    p.essais_utilises,
                    p.indice_utilise ? "Oui" : "Non");
         }
@@ -580,12 +582,3 @@ void afficher_comparaison(Statistiques *stats1, Statistiques *stats2, const char
     // Pause obligatoire
     getchar();
 }
-
-
-
-
-
-
-
-
-
