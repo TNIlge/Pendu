@@ -7,7 +7,7 @@
 #include <time.h>
 #include <ctype.h>
 
-// Niveaux de difficulté
+// Niveaux de difficult
 typedef enum {
     FACILE = 1,      // 3-5 lettres, 10 essais
     MOYEN = 2,       // 6-8 lettres, 8 essais
@@ -28,7 +28,7 @@ typedef enum {
 #define MAX_PASSWORD 50            // Longueur maximale d'un mot de passe
 #define MAX_INDICE 200             // Longueur maximale d'un indice
 #define MAX_UTILISATEURS 100       // Nombre maximum d'utilisateurs
-#define MAX_CLASSEMENT 50          // Nombre de joueurs affichés au classement
+#define MAX_CLASSEMENT 50          // Nombre de joueurs affichs au classement
 
 // Limites de longueur de mots par niveau
 #define MIN_LONGUEUR_FACILE 3
@@ -42,17 +42,20 @@ typedef enum {
 #define ESSAIS_MOYEN 8
 #define ESSAIS_DIFFICILE 6
 
+// Longueur maximale des options dans le menu
+#define MAX_OPTION_LONGUEUR 100
+
 typedef struct {
     int id;                        // ID unique de l'utilisateur
     char pseudo[MAX_PSEUDO];       // Pseudo de l'utilisateur
     char mot_de_passe[MAX_PASSWORD]; // Mot de passe (stockage simple)
-    time_t date_creation;          // Date de création du compte
-    int actif;                     // 1 si compte actif, 0 si supprimé
+    time_t date_creation;          // Date de cration du compte
+    int actif;                     // 1 si compte actif, 0 si supprim
 } Utilisateur;
 
 typedef struct {
-    int est_connecte;              // 1 si un utilisateur est connecté
-    Utilisateur utilisateur;       // L'utilisateur connecté
+    int est_connecte;              // 1 si un utilisateur est connect
+    Utilisateur utilisateur;       // L'utilisateur connect
 } Session;
 
 typedef struct {
@@ -61,17 +64,17 @@ typedef struct {
 } EntreeDictionnaire;
 
 typedef struct {
-    char *mot_secret;              // Le mot à deviner (alloué dynamiquement)
-    char *mot_affiche;             // Mot avec _ pour lettres non trouvées
-    char *indice;                  // L'indice pour ce mot (alloué dynamiquement)
-    char lettres_utilisees[MAX_LETTRES_ALPHABET];  // Lettres déjà proposées
-    int nb_lettres_utilisees;      // Nombre de lettres utilisées
+    char *mot_secret;              // Le mot deviner (allou dynamiquement)
+    char *mot_affiche;             // Mot avec _ pour lettres non trouves
+    char *indice;                  // L'indice pour ce mot (allou dynamiquement)
+    char lettres_utilisees[MAX_LETTRES_ALPHABET];  // Lettres dj proposes
+    int nb_lettres_utilisees;      // Nombre de lettres utilises
     int essais_restants;           // Nombre d'essais restants
-    int essais_max;                // Maximum d'essais selon difficulté
+    int essais_max;                // Maximum d'essais selon difficult
     int nb_erreurs;                // Nombre d'erreurs commises
-    int indice_utilise;            // 1 si l'utilisateur a consulté l'indice
-    Difficulte niveau;             // Niveau de difficulté
-    time_t heure_debut;            // Heure de début (pour chronomètre)
+    int indice_utilise;            // 1 si l'utilisateur a consult l'indice
+    Difficulte niveau;             // Niveau de difficult
+    time_t heure_debut;            // Heure de dbut (pour chronomtre)
     int partie_gagnee;             // 1 si victoire, 0 sinon, -1 en cours
     int id_utilisateur;            // ID de l'utilisateur jouant cette partie
 } Partie;
@@ -82,8 +85,8 @@ typedef struct {
    ============================================================ */
 
 typedef struct {
-    EntreeDictionnaire *entrees;   // Tableau d'entrées (mots + indices)
-    int nb_entrees;                // Nombre d'entrées dans le dictionnaire
+    EntreeDictionnaire *entrees;   // Tableau d'entres (mots + indices)
+    int nb_entrees;                // Nombre d'entres dans le dictionnaire
     TypeDictionnaire type;         // Type de dictionnaire
     char nom_fichier[100];         // Nom du fichier source
 } Dictionnaire;
@@ -91,38 +94,38 @@ typedef struct {
 
 typedef struct {
     char mot[MAX_LONGUEUR_MOT];    // Le mot de la partie
-    int essais_utilises;           // Nombre d'essais utilisés
-    int duree_secondes;            // Durée en secondes
-    Difficulte niveau;             // Niveau joué
-    int victoire;                  // 1 si gagné, 0 si perdu
-    int indice_utilise;            // 1 si indice consulté
+    int essais_utilises;           // Nombre d'essais utiliss
+    int duree_secondes;            // Dure en secondes
+    Difficulte niveau;             // Niveau jou
+    int victoire;                  // 1 si gagn, 0 si perdu
+    int indice_utilise;            // 1 si indice consult
     time_t date;                   // Date de la partie
 } StatPartie;
 
 
 typedef struct {
     int id_utilisateur;            // ID de l'utilisateur
-    int total_parties;             // Nombre total de parties jouées
+    int total_parties;             // Nombre total de parties joues
     int total_victoires;           // Nombre de victoires
-    int total_defaites;            // Nombre de défaites
+    int total_defaites;            // Nombre de dfaites
     int total_essais;              // Total des essais sur toutes les parties
     int total_secondes;            // Temps total de jeu en secondes
-    int total_indices_utilises;    // Nombre total d'indices utilisés
+    int total_indices_utilises;    // Nombre total d'indices utiliss
 
     // Statistiques par niveau
     int parties_facile;            // Parties en mode facile
     int victoires_facile;          // Victoires en mode facile
     int parties_moyen;             // Parties en mode moyen
-    int victoires_moyen;           // Victoires en mode moyen
+    int victoires_moyen;          // Victoires en mode moyen
     int parties_difficile;         // Parties en mode difficile
     int victoires_difficile;       // Victoires en mode difficile
 
-    // Moyennes calculées
+    // Moyennes calcules
     float taux_victoire;           // Pourcentage de victoires
     float moyenne_essais;          // Moyenne d'essais par partie
-    float moyenne_duree;           // Durée moyenne par partie
+    float moyenne_duree;           // Dure moyenne par partie
 
-    // Historique des parties récentes (10 dernières parties)
+    // Historique des parties rcentes (10 dernires parties)
     StatPartie parties_recentes[10];
     int nb_parties_recentes;       // Nombre de parties dans l'historique
 } Statistiques;
@@ -140,9 +143,9 @@ typedef struct {
 
 
 typedef struct {
-    EntreeClassement classement[MAX_CLASSEMENT];  // Tableau des entrées
+    EntreeClassement classement[MAX_CLASSEMENT];  // Tableau des entres
     int nb_joueurs;                // Nombre de joueurs dans le classement
-    time_t derniere_maj;           // Date de dernière mise à jour
+    time_t derniere_maj;           // Date de dernire mise jour
 } Leaderboard;
 
 #endif
